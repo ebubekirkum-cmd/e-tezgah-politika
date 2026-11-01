@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>e-Tezgah — Hesap Silme Talebi</title>
+<style>
+  :root { --yesil:#245741; --acik:#5C8374; --zemin:#FAF6F1; --cizgi:#E0D5CF; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--zemin); color:#222831;
+         font:16px/1.65 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  header { background:var(--yesil); color:#fff; padding:32px 20px; }
+  header h1 { margin:0 0 6px; font-size:24px; }
+  header p { margin:0; opacity:.85; font-size:14px; }
+  main { max-width:820px; margin:0 auto; padding:28px 20px 64px; }
+  h2 { color:var(--yesil); font-size:19px; margin:30px 0 10px; }
+  ol, ul { padding-left:22px; }
+  li { margin:6px 0; }
+  .kutu { background:#fff; border:1px solid var(--cizgi); border-radius:12px;
+          padding:16px 18px; margin:16px 0; }
+  .dugme { display:inline-block; background:var(--yesil); color:#fff;
+           text-decoration:none; padding:12px 20px; border-radius:10px;
+           font-weight:600; margin-top:8px; }
+  .dugme:hover { background:#1b4030; }
+  a { color:var(--yesil); }
+  table { border-collapse:collapse; width:100%; margin:12px 0; font-size:14px; }
+  th, td { border:1px solid var(--cizgi); padding:8px 10px; text-align:left; }
+  th { background:#EFE9E3; }
+  footer { text-align:center; font-size:13px; color:var(--acik); padding:24px; }
+  code { background:#EFE9E3; padding:1px 5px; border-radius:4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Hesap Silme Talebi</h1>
+  <p>e-Tezgah · Son güncelleme: 1 Kasım 2026</p>
+</header>
+
+<main>
+  <p>
+    Bu sayfa, <strong>e-Tezgah</strong> uygulamasındaki hesabınızı ve ona bağlı
+    tüm verileri silmenin iki yolunu açıklar. Uygulamayı cihazınızdan kaldırmış
+    olsanız da aşağıdaki e-posta yoluyla silme talebi gönderebilirsiniz.
+  </p>
+
+  <h2>1. Uygulama içinden silme (en hızlı)</h2>
+  <ol>
+    <li>e-Tezgah uygulamasını açın ve hesabınızla giriş yapın.</li>
+    <li><strong>Ana ekran → Ayarlar</strong> (dişli simgesi) bölümüne gidin.</li>
+    <li><strong>Veri Yönetimi → Hesabımı Sil</strong> satırına dokunun.</li>
+    <li>Onay kutusunu işaretleyip <strong>“Hesabımı Kalıcı Olarak Sil”</strong>
+      düğmesine basın.</li>
+  </ol>
+  <p>İşlem anında tamamlanır. Silme sonrası aynı hesapla giriş yapılamaz.</p>
+
+  <h2>2. E-posta ile silme talebi</h2>
+  <p>
+    Uygulamaya erişemiyorsanız, hesabınızda kayıtlı e-posta adresinden bize
+    yazın. Talebin işleme alınabilmesi için:
+  </p>
+  <ul>
+    <li>konu satırına <code>Hesap Silme Talebi</code> yazın,</li>
+    <li>hesabınızda kayıtlı e-posta adresini belirtin,</li>
+    <li>Google ile giriş kullandıysanız bunu da not edin.</li>
+  </ul>
+
+  <div class="kutu">
+    <a class="dugme"
+       href="mailto:etezgah.destek@gmail.com?subject=Hesap%20Silme%20Talebi&body=Merhaba%2C%0A%0Ae-Tezgah%20hesab%C4%B1m%C4%B1n%20ve%20ona%20ba%C4%9Fl%C4%B1%20t%C3%BCm%20verilerin%20silinmesini%20talep%20ediyorum.%0A%0AHesap%20e-postas%C4%B1%3A%20%0A%0ATe%C5%9Fekk%C3%BCrler.">
+      E-posta ile silme talebi gönder
+    </a>
+    <p style="margin:12px 0 0; font-size:14px; color:var(--acik);">
+      Adres: <a href="mailto:etezgah.destek@gmail.com">etezgah.destek@gmail.com</a>
+    </p>
+  </div>
+
+  <p>
+    E-posta yoluyla gelen talepler kimlik doğrulaması yapıldıktan sonra
+    <strong>en geç 30 gün içinde</strong> tamamlanır ve sonuç size bildirilir.
+  </p>
+
+  <h2>3. Neler silinir?</h2>
+  <table>
+    <tr><th>Veri</th><th>Silinir mi?</th></tr>
+    <tr><td>Giriş hesabı (e-posta/Google bağlantısı)</td><td>Evet</td></tr>
+    <tr><td>İşletme profili (ad, adres, telefon, VKN/TCKN, vergi dairesi)</td><td>Evet</td></tr>
+    <tr><td>Müşteri, tedarikçi ve yetkili kişi kayıtları</td><td>Evet</td></tr>
+    <tr><td>Siparişler, irsaliyeler, faturalar ve kalemleri</td><td>Evet</td></tr>
+    <tr><td>Kasa hesapları, para hareketleri, sabit giderler, hedefler</td><td>Evet</td></tr>
+    <tr><td>Ürün, hammadde, reçete, stok ve maliyet kayıtları</td><td>Evet</td></tr>
+    <tr><td>Notlar, üretim/imalat görevleri</td><td>Evet</td></tr>
+    <tr><td>Siparişe eklenen referans görselleri</td><td>Evet</td></tr>
+    <tr><td>Cihazdaki yerel veritabanı (uygulama içi silmede)</td><td>Evet</td></tr>
+  </table>
+  <p>
+    Silme işlemi geri alınamaz. Yasal olarak saklanması zorunlu bir kayıt
+    (ör. düzenlenmiş bir e-Belge) varsa, yalnızca ilgili mevzuatın öngördüğü
+    süre boyunca saklanır ve başka hiçbir amaçla kullanılmaz.
+  </p>
+
+  <h2>4. Verileriniz hakkında</h2>
+  <p>
+    Verilerinizin nerede saklandığını ve nasıl işlendiğini
+    <a href="index.html">gizlilik politikasında</a> bulabilirsiniz.
+  </p>
+</main>
+
+<footer>e-Tezgah · <a href="index.html">Gizlilik Politikası</a></footer>
+</body>
+</html>

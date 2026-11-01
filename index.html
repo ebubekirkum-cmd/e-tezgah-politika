@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>e-Tezgah — Gizlilik Politikası / Privacy Policy</title>
+<style>
+  :root { --yesil:#245741; --acik:#5C8374; --zemin:#FAF6F1; --cizgi:#E0D5CF; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--zemin); color:#222831;
+         font:16px/1.65 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  header { background:var(--yesil); color:#fff; padding:32px 20px; }
+  header h1 { margin:0 0 6px; font-size:24px; }
+  header p { margin:0; opacity:.85; font-size:14px; }
+  main { max-width:820px; margin:0 auto; padding:28px 20px 64px; }
+  h2 { color:var(--yesil); font-size:19px; margin:32px 0 10px; }
+  h3 { font-size:16px; margin:20px 0 6px; }
+  ul { padding-left:20px; }
+  li { margin:4px 0; }
+  table { border-collapse:collapse; width:100%; margin:12px 0; font-size:14px; }
+  th, td { border:1px solid var(--cizgi); padding:8px 10px; text-align:left; }
+  th { background:#EFE9E3; }
+  .kutu { background:#fff; border:1px solid var(--cizgi); border-radius:12px;
+          padding:16px 18px; margin:16px 0; }
+  .uyari { border-left:4px solid var(--yesil); padding-left:14px; }
+  a { color:var(--yesil); }
+  .dil { margin-top:40px; padding-top:20px; border-top:2px solid var(--cizgi); }
+  footer { text-align:center; font-size:13px; color:var(--acik); padding:24px; }
+  code { background:#EFE9E3; padding:1px 5px; border-radius:4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>e-Tezgah — Gizlilik Politikası</h1>
+  <p>Son güncelleme: 1 Kasım 2026 · Uygulama: e-Tezgah (<code>com.uretimtakip.uretim_takip</code>)</p>
+</header>
+
+<main>
+  <p>
+    Bu politika, <strong>e-Tezgah</strong> uygulamasının hangi verileri işlediğini,
+    nerede sakladığını ve nasıl silebileceğinizi açıklar. Uygulama; pastane, fırın
+    ve gıda imalatı yapan küçük işletmeler için bir ön muhasebe ve takip
+    uygulamasıdır.
+  </p>
+
+  <div class="kutu uyari">
+    <strong>Kısa özet:</strong> Reklam gösterilmez, reklam kimliği toplanmaz,
+    üçüncü taraf analitik veya çökme raporlama SDK'sı yoktur, veriler satılmaz.
+    Kayıtlar önce cihazda tutulur; internet varken yalnızca sizin hesabınıza
+    bağlı bulut alanına (Supabase) eşitlenir.
+  </div>
+
+  <h2>1. Hangi veriler işlenir</h2>
+
+  <h3>a) Hesap bilgileri</h3>
+  <ul>
+    <li>E-posta adresi ve görünen ad (kimlik doğrulama için).</li>
+    <li>Google ile giriş kullanılırsa Google'dan gelen e-posta ve ad.</li>
+  </ul>
+
+  <h3>b) İşletme profili (sizin girdiğiniz)</h3>
+  <ul>
+    <li>İşletme adı, telefon, e-posta, adres, VKN/TCKN, vergi dairesi, e-Belge öneki.</li>
+  </ul>
+
+  <h3>c) İşletme kayıtları (sizin girdiğiniz)</h3>
+  <ul>
+    <li>Müşteri ve tedarikçi kayıtları (ad, telefon, adres, yetkili kişi),</li>
+    <li>siparişler, irsaliye/fatura bilgileri, ürün ve hammadde kayıtları,</li>
+    <li>kasa hesapları ve para hareketleri, sabit giderler, hedefler, notlar,</li>
+    <li>ürün maliyet hesapları ve üretim görevleri.</li>
+  </ul>
+
+  <h3>d) İsteğe bağlı görsel</h3>
+  <ul>
+    <li>Siparişe eklediğiniz referans fotoğrafı (yalnız siz eklerseniz).</li>
+  </ul>
+
+  <h3>e) Mikrofon (isteğe bağlı, yalnız sesli komut)</h3>
+  <ul>
+    <li>Sesli komut ekranı açıkken mikrofon kullanılır.</li>
+    <li>Ses kaydedilmez, saklanmaz ve uygulamanın sunucusuna gönderilmez.</li>
+    <li>Metne çevirme işlemi işletim sisteminin konuşma tanıma servisiyle
+      (Android'de Google) yapılır; bu servis sesi kendi altyapısında işleyebilir.</li>
+  </ul>
+
+  <h3>f) Teknik veriler</h3>
+  <ul>
+    <li>Eşitleme kuyruğu ve hata kayıtları cihazda tutulur.</li>
+    <li>Sunucuya yalnızca sizin girdiğiniz kayıtlar gönderilir.</li>
+  </ul>
+
+  <p>
+    Uygulama <strong>konum, kişiler, takvim, SMS veya arama kaydı</strong> okumaz.
+  </p>
+
+  <h2>2. Veriler nerede saklanır</h2>
+  <ul>
+    <li><strong>Cihazda:</strong> SQLite veritabanı (uygulamanın özel alanı).
+      Çevrimdışı çalışabilmek için kayıtlar önce buraya yazılır.</li>
+    <li><strong>Bulutta:</strong> Supabase (PostgreSQL + kimlik doğrulama + dosya
+      depolama). Kayıtlar hesabınıza bağlıdır; satır düzeyi güvenlik (RLS) ile
+      yalnızca hesap sahibi erişebilir.</li>
+    <li><strong>Yedek dosyası:</strong> Yedek aldığınızda dosya kendi seçtiğiniz
+      konuma yazılır; uygulama bu dosyayı kendi sunucusuna yüklemez.</li>
+  </ul>
+  <p>Aktarım HTTPS üzerinden şifrelenir.</p>
+
+  <h2>3. Üçüncü taraflar</h2>
+  <table>
+    <tr><th>Taraf</th><th>Amaç</th><th>Veri</th></tr>
+    <tr><td>Supabase</td><td>Veritabanı, kimlik doğrulama, dosya depolama</td>
+        <td>Hesap ve işletme kayıtları</td></tr>
+    <tr><td>Google</td><td>İsteğe bağlı "Google ile giriş"</td><td>E-posta, ad</td></tr>
+    <tr><td>Google</td><td>Sesli komut (işletim sisteminin konuşma tanıma servisi)</td>
+        <td>Ses, yalnızca komut ekranı açıkken ve yalnız metne çevirmek için</td></tr>
+  </table>
+  <p>Bunlar dışında veri satılmaz, kiralanmaz, reklam amacıyla paylaşılmaz.</p>
+
+  <h2>4. Verilerin kullanım amacı</h2>
+  <ul>
+    <li>Uygulamanın temel işlevleri (kasa, cari, sipariş, stok, maliyet),</li>
+    <li>cihazlar arası eşitleme,</li>
+    <li>sizin talep ettiğiniz PDF/Excel çıktıları ve yedekler.</li>
+  </ul>
+
+  <h2>5. Saklama süresi ve silme</h2>
+  <p>Kayıtlar, siz silene kadar saklanır.</p>
+  <ul>
+    <li><strong>İşletme kayıtlarını sıfırlama:</strong>
+      Ayarlar → Veri Yönetimi → Verileri Sıfırla. Cihazdaki ve buluttaki işletme
+      kayıtları silinir; işletme profili ve ayarlar korunur.</li>
+    <li><strong>Hesabı tamamen silme:</strong>
+      Ayarlar → Veri Yönetimi → Hesabımı Sil. Giriş hesabı, işletme profili ve tüm
+      kayıtlar hem sunucudan hem cihazdan silinir. İşlem anında tamamlanır ve
+      geri alınamaz.</li>
+    <li><strong>Uygulamaya erişemiyorsanız:</strong>
+      <a href="hesap-silme.html">hesap silme sayfasındaki</a> yolu kullanabilirsiniz.
+      Bu yolla gelen talepler en geç 30 gün içinde yerine getirilir.</li>
+  </ul>
+
+  <h2>6. Haklarınız</h2>
+  <p>
+    Verilerinizi uygulama içinden görüntüleyebilir, düzeltebilir, silebilir ve
+    dışa aktarabilirsiniz. KVKK kapsamında verilerinize erişme, düzeltme, silme
+    ve itiraz haklarınız vardır.
+  </p>
+
+  <h2>7. Çocukların verileri</h2>
+  <p>
+    Uygulama 18 yaş ve üzeri işletme kullanıcıları için tasarlanmıştır;
+    çocuklardan bilerek veri toplamaz.
+  </p>
+
+  <h2>8. Değişiklikler</h2>
+  <p>
+    Bu metin güncellenirse "son güncelleme" tarihi değişir; önemli değişiklikler
+    uygulama içinde duyurulur.
+  </p>
+
+  <h2>9. İletişim</h2>
+  <p>
+    <a href="mailto:etezgah.destek@gmail.com">etezgah.destek@gmail.com</a>
+  </p>
+
+  <div class="dil">
+    <h2>English summary</h2>
+    <p>
+      e-Tezgah is a bookkeeping app for small bakeries and food producers. It does
+      not show ads, does not collect advertising identifiers and contains no
+      third-party analytics or crash-reporting SDK. Data is stored first on the
+      device (SQLite) and synced over HTTPS to the user's own Supabase account
+      (PostgreSQL, auth, file storage). Optional Google sign-in uses the user's
+      e-mail and name. The optional voice-command feature uses the operating
+      system's speech recognition service while its screen is open; audio is not
+      stored by the app. Data is never sold or shared for advertising. Users can
+      delete their business records in-app (Settings → Reset data) and can delete
+      their entire account in-app (Settings → Delete My Account), which removes
+      the login, the business profile and all records from the server and the
+      device. Deletion is immediate and irreversible. Requests sent by e-mail are
+      handled within 30 days.
+    </p>
+    <p>Contact: <a href="mailto:etezgah.destek@gmail.com">etezgah.destek@gmail.com</a></p>
+  </div>
+</main>
+
+<footer>e-Tezgah · <a href="hesap-silme.html">Hesap silme talebi</a></footer>
+</body>
+</html>
